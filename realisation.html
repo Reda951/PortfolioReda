@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Réalisation - Portfolio Reda Aboudi</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="realisation.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+
+  <!-- Prism pour coloration syntaxique -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js" defer></script>
 </head>
 <body>
   <header>
@@ -94,15 +101,18 @@
         <div id="popup-competences" class="competence-list"></div>
       </div>      
     </div>
-    </div>
+  </div>
 
   <footer>
     <p>&copy; 2024 Reda Aboudi</p>
   </footer>
+
+  <!-- Zoom modal -->
   <div id="zoom-modal" class="zoom-modal">
     <img id="zoomed-img" />
   </div>
-  
+
+  <!-- Scripts -->
   <script src="projects.js"></script>
   <script src="popup.js"></script>
 </body>

@@ -55,6 +55,8 @@ function openPopupByIndex(index) {
       container.appendChild(content);
       competencesContainer.appendChild(container);
     });
+    popup.style.display = "flex";
+    Prism.highlightAll(); // ✅ colorisation syntaxique
   }
 
   popup.style.display = "flex";

@@ -132,8 +132,64 @@ const projects = [
       competences: [
         {
           titre: "Recenser et identifier les ressources numériques",
-          contenu: "Analyse des EPI, types, états et périodicité de contrôle pour adapter les modèles de données."
-        },
+          contenu: `
+            <p style="margin-bottom: 16px;">
+              🔍 Pour répondre à cette compétence, j’ai modélisé les ressources clés de l’application (EPI, Contrôle, Utilisateur) avec Sequelize.
+            </p>
+        
+            <div class="code-exp-grid">
+              <div class="code-block">
+                <pre><code class="language-javascript">
+        const EPI = sequelize.define('EPI', {
+          id: { type: DataTypes.UUID, primaryKey: true },
+          numeroSerie: DataTypes.STRING,
+          type: DataTypes.ENUM('TEXTILE', 'METAL'),
+          statut: DataTypes.ENUM('OPERATIONNEL', 'REPARATION', 'REBUT'),
+          dateAchat: DataTypes.DATEONLY,
+          periodiciteControle: DataTypes.INTEGER
+        });
+                </code></pre>
+              </div>
+              <div class="explication">
+                🧩 <strong>Modèle EPI :</strong> Ce modèle décrit les équipements à suivre : numéro de série, type (textile ou métal), statut, dates clés et fréquence de contrôle.
+              </div>
+            </div>
+        
+            <div class="code-exp-grid">
+              <div class="code-block">
+                <pre><code class="language-javascript">
+        const ControleModel = sequelize.define('Controle', {
+          id: { type: DataTypes.STRING, primaryKey: true },
+          date: DataTypes.STRING,
+          gestionnaire: DataTypes.STRING,
+          statut: DataTypes.STRING,
+          remarques: DataTypes.STRING,
+        });
+        ControleModel.belongsTo(EPIModel, { foreignKey: 'epiId' });
+                </code></pre>
+              </div>
+              <div class="explication">
+                🧩 <strong>Modèle Contrôle :</strong> Chaque contrôle est lié à un EPI et stocke les infos : date, statut, remarques, gestionnaire.
+              </div>
+            </div>
+        
+            <div class="code-exp-grid">
+              <div class="code-block">
+                <pre><code class="language-javascript">
+        const User = sequelize.define('User', {
+          id: { type: DataTypes.UUID, primaryKey: true },
+          nom: DataTypes.STRING,
+          email: DataTypes.STRING,
+          role: DataTypes.ENUM('admin', 'gestionnaire')
+        });
+                </code></pre>
+              </div>
+              <div class="explication">
+                🧩 <strong>Modèle Utilisateur :</strong> Gère les rôles d’utilisateur (admin/gestionnaire) et permet d’associer les actions à un utilisateur identifié.
+              </div>
+            </div>
+          `
+        },                                   
         {
           titre: "Planifier les activités",
           contenu: "Découpage en lots : BDD et API, puis front et alertes."
