@@ -94,6 +94,8 @@ const zoomedImg = document.getElementById("zoomed-img");
 
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("zoom-img")) {
+    e.preventDefault(); // Empêche comportement par défaut
+    e.stopPropagation(); // Empêche d'autres handlers
     zoomedImg.src = e.target.src;
     zoomModal.style.display = "flex";
   } else if (e.target === zoomModal) {

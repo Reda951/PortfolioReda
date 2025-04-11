@@ -98,7 +98,7 @@ const projects = [
               </div>
             `
           },          
-        {
+          {
             titre: "Planifier les activités",
             contenu: `
               Pour mener à bien le développement de JoTickets, j’ai découpé le projet en plusieurs modules :
@@ -109,9 +109,7 @@ const projects = [
               Cela m’a permis de mieux répartir les étapes dans le temps, de visualiser mes objectifs, et de résoudre les blocages au fur et à mesure.
               
               <br><br>
-              <a href="docs/planning-jotickets.jpg" target="_blank">
-                <img src="docs/planning-jotickets.jpg" alt="Trello JoTickets" class="zoom-img" style="max-width:100%; border-radius: 8px; border: 1px solid #ccc; cursor: zoom-in;">
-              </a>
+              <img src="docs/planning-jotickets.png" alt="Trello JO" class="zoom-img trello-jotickets-img" style="max-width:100%; border-radius:8px; border:1px solid #ccc; cursor: zoom-in;">
             `
           }
       ]
