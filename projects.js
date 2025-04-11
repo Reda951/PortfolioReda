@@ -98,9 +98,21 @@ const projects = [
             `
           },          
         {
-          titre: "Planifier les activités",
-          contenu: "Organisation du travail en plusieurs modules : interface d’admin, API, puis front-end en mobile et scan."
-        }
+            titre: "Planifier les activités",
+            contenu: `
+              Pour mener à bien le développement de JoTickets, j’ai découpé le projet en plusieurs modules :
+              interface d’administration, API, interface d’achat de billets, et scan de QR code.
+          
+              <br><br>
+              J’ai utilisé Trello pour organiser les tâches à réaliser, suivre leur avancement et les prioriser.
+              Cela m’a permis de mieux répartir les étapes dans le temps, de visualiser mes objectifs, et de résoudre les blocages au fur et à mesure.
+              
+              <br><br>
+              <a href="docs/planning-jotickets.jpg" target="_blank">
+                <img src="docs/planning-jotickets.jpg" alt="Trello JoTickets" class="zoom-img" style="max-width:100%; border-radius: 8px; border: 1px solid #ccc; cursor: zoom-in;">
+              </a>
+            `
+          }
       ]
     },
     {
