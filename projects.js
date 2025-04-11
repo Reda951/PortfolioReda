@@ -58,8 +58,12 @@ const projects = [
         "Connexion API, gestion base de données, création des vues Django, implémentation de QR codes, sécurisation des accès.",
       duree: "3 mois",
       outils: "Django, Python, HTML, JS, QR Scanner, VS Code",
-      lecon:
-        "Compréhension des API REST, gestion de projet fullstack, sécurisation d’applications.",
+      lecon:`
+      <a href="https://github.com/esiee-it-slam-2025/aboudi_reda/tree/348769cf31007bc0bf9964b883afd64626b31904/TP%20PROJET%20JO" 
+         target="_blank" 
+         style="color: #0066cc; text-decoration: underline;">
+        🔗 Voir le code du projet sur GitHub
+      </a>`,
       etapes: ["Développement de l'API", "Création des interfaces front", "Déploiement et test"],
       competences: [
         {
