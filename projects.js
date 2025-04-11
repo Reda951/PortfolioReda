@@ -22,7 +22,7 @@ const projects = [
               <br><br>
               <button onclick="togglePdf(this)">📄 Voir le cahier des charges</button>
               <div class="pdf-wrapper" style="display:none; margin-top: 10px;">
-                <iframe src="docs/cahier-des-charges-yueii.pdf" width="100%" height="300px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+                <a href="/docs/cahier-des-charges-yueii.pdf" target="_blank">🔗 Ouvrir dans un nouvel onglet</a>
                 <br>
                 <a href="docs/cahier-des-charges-yueii.pdf" target="_blank" class="pdf-btn">🔗 Ouvrir dans un nouvel onglet</a>
               </div>
