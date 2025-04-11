@@ -47,8 +47,7 @@ const projects = [
               <video controls style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
                 <source src="docs/yueiivideo.mp4" type="video/mp4">
               </video>
-            `
-          }                   
+            `}                   
       ]
     },
     {
