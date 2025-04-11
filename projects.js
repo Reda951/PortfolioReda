@@ -124,7 +124,7 @@ const projects = [
         "Application de suivi des équipements de sécurité (EPI) pour cordistes : ajout, contrôles, alertes de maintenance, détails et historique.",
       missions:
         "Développement back-end Express/TS, front React/MUI, structuration des interfaces types, alerte de maintenance.",
-      duree: "1 mois",
+      duree: "3 mois",
       outils: "React, TypeScript, Express, MariaDB, VS Code",
       lecon:
         "Renforcement en structuration d'app fullstack, typage et réutilisation de composants.",
@@ -192,7 +192,19 @@ const projects = [
         },                                   
         {
           titre: "Planifier les activités",
-          contenu: "Découpage en lots : BDD et API, puis front et alertes."
+          contenu: `
+            J’ai découpé mon travail en plusieurs lots : création de la base de données, développement de l’API, puis développement du front avec alertes. Cette organisation m’a permis d’avoir une vue claire du projet à chaque étape.
+            
+            <br><br>
+            📦 <strong>Architecture de l’application GestEPI :</strong>
+            <br><br>
+            <img src="docs/ArchitectureGestEPI.png" alt="Architecture application GestEPI" class="zoom-img" style="max-width:100%; border-radius:8px; border:1px solid #ccc;">
+        
+            <br><br>
+            📋 <strong>Suivi des tâches avec Trello :</strong>
+            <br><br>
+            <img src="docs/trellogestepi.png" alt="Trello GestEPI" class="zoom-img" style="max-width:100%; border-radius:8px; border:1px solid #ccc;">
+          `
         },
         {
           titre: "Développer son projet professionnel",
