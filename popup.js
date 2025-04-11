@@ -101,3 +101,17 @@ document.addEventListener("click", function (e) {
   }
 });
 
+function openReadmePopup() {
+  document.getElementById("readme-popup").style.display = "flex";
+}
+
+function closeReadmePopup() {
+  document.getElementById("readme-popup").style.display = "none";
+}
+
+window.addEventListener("click", function (e) {
+  const readmePopup = document.getElementById("readme-popup");
+  if (e.target === readmePopup) {
+    closeReadmePopup();
+  }
+});

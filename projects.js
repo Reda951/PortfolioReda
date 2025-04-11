@@ -126,8 +126,12 @@ const projects = [
         "Développement back-end Express/TS, front React/MUI, structuration des interfaces types, alerte de maintenance.",
       duree: "3 mois",
       outils: "React, TypeScript, Express, MariaDB, VS Code",
-      lecon:
-        "Renforcement en structuration d'app fullstack, typage et réutilisation de composants.",
+      lecon:`
+      <a href="https://github.com/Reda951/GestEPI.git" 
+         target="_blank" 
+         style="color: #0066cc; text-decoration: underline;">
+        🔗 Voir le code du projet sur GitHub
+      </a>`,
       etapes: ["Architecture du projet", "Développement Front/Back", "Mise en place des alertes"],
       competences: [
         {
@@ -208,7 +212,11 @@ const projects = [
         },
         {
           titre: "Développer son projet professionnel",
-          contenu: "Projet complexe en autonomie sur la durée, m’ayant permis de monter en compétences sur le développement React/TS."
+          contenu: `
+            Ce projet m’a permis de travailler en autonomie complète sur la durée, en allant du back-end à l’interface React. J’ai documenté mes choix, mon organisation et mes apprentissages dans un fichier personnel que voici :
+            <br><br>
+            <button class="readme-btn" onclick="openReadmePopup()">📄 Lire le README personnel</button>
+          `
         }
       ]
     },
