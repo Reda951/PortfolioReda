@@ -117,3 +117,17 @@ window.addEventListener("click", function (e) {
     closeReadmePopup();
   }
 });
+function openChargeFukuoka() {
+  document.getElementById("charge-fukuoka-popup").style.display = "flex";
+}
+
+function closeChargeFukuoka() {
+  document.getElementById("charge-fukuoka-popup").style.display = "none";
+}
+
+window.addEventListener("click", function (e) {
+  const popupFukuoka = document.getElementById("charge-fukuoka-popup");
+  if (e.target === popupFukuoka) {
+    closeChargeFukuoka();
+  }
+});
