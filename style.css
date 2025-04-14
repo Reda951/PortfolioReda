@@ -1,11 +1,26 @@
-/* --- Couleurs principales --- */
-body {
+/* ----- Base globale ----- */
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Courier New', monospace;
+  background-color: #0e1013;
+  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #e0f7fa;
 }
 
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ----- Header ----- */
 header {
   background-color: #002e4d;
   color: white;
@@ -15,11 +30,11 @@ header {
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
   gap: 1.5em;
   margin: 0;
+  padding: 0;
   flex-wrap: wrap;
 }
 
@@ -31,14 +46,15 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #40c9ff;
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
 }
 
-/* --- Section d'accueil animée --- */
+/* ----- Hero section ----- */
 .hero-section {
   background: linear-gradient(135deg, #002e4d, #00567a);
   color: white;
-  padding: 3em 1em; /* moins haut */
+  padding: 3em 1em;
   animation: fadeIn 1.5s ease;
 }
 
@@ -77,51 +93,46 @@ nav ul li a:hover {
   animation: slideIn 2s ease forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- Bouton CV --- */
+/* ----- Boutons ----- */
 .btn {
   display: inline-block;
   margin-top: 10px;
-  background-color: #002e4d;
-  color: white;
+  background-color: transparent;
+  color: #00ffff;
+  border: 1px solid #00ffff;
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #004a7c;
+  background-color: #00ffee2c;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  color: #00ffff;
 }
 
-/* --- Conteneur --- */
+/* ----- Conteneur principal ----- */
 .container {
   max-width: 900px;
   margin: 2em auto;
-  background: white;
+  background: #1e1e1e;
   border-radius: 10px;
   padding: 2em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
 }
 
-/* --- Titres & Texte --- */
+/* ----- Titres et paragraphes ----- */
 h1, h2 {
   text-align: center;
-  color: #002e4d;
+  color: #00ffff;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
 }
 
 p {
   line-height: 1.6;
   margin-bottom: 1em;
+  text-align: justify;
 }
 
 ul {
@@ -133,7 +144,7 @@ li {
   margin-bottom: 0.5em;
 }
 
-/* --- Compétences & outils --- */
+/* ----- Compétences et outils ----- */
 .skills-logos {
   display: flex;
   justify-content: center;
@@ -160,31 +171,44 @@ li {
 .skill-item span {
   display: block;
   font-weight: bold;
-  color: #002e4d;
+  color: #00ffff;
 }
 
-/* --- Footer --- */
-footer {
-  background-color: #002e4d;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  margin-top: 2em;
-}
-
-/* --- Encadré RGPD --- */
+/* ----- Encadré RGPD ----- */
 .legal-box {
-  background-color: #eeeeee;
-  color: #333;
+  background-color: #2b2b2b;
+  color: #e0f7fa;
   font-size: 0.9em;
   border-radius: 8px;
   padding: 15px;
   margin: 20px auto;
   max-width: 900px;
   text-align: center;
+  border: 1px solid #00ffff;
 }
 
-/* --- Responsive --- */
+/* ----- Footer ----- */
+footer {
+  background-color: #002e4d;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* ----- Animations ----- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----- Responsive ----- */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -224,4 +248,33 @@ footer {
   footer p, footer a {
     font-size: 14px;
   }
+}
+/* Centrer le texte à propos et limiter la largeur */
+.about-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Centrer le bouton CV sous le texte */
+.about-wrapper .btn {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+/* Centrer tout le contenu du footer proprement */
+footer {
+  background-color: #002e4d;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+footer img {
+  height: 40px;
 }

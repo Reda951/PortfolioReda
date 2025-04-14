@@ -1,65 +1,143 @@
-/* Base cohérente avec les autres pages */
+/* --- Base terminale sombre cohérente avec le portfolio --- */
 body {
-    font-family: 'Georgia', serif;
-    background-color: #f4f4f4;
-    color: #222;
-    margin: 0;
-    padding: 0;
-    line-height: 1.7;
-  }
-  
+  font-family: 'Courier New', monospace;
+  background-color: #0e1013;
+  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  background-attachment: fixed;
+  background-repeat: repeat;
+  color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* --- Header / Navigation --- */
+header {
+  background-color: #002e4d;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+/* --- Conteneur principal --- */
+.legal-container {
+  max-width: 1000px;
+  margin: 3em auto;
+  background: #1e1e1e;
+  padding: 2.5em;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.06);
+  font-size: 1rem;
+  animation: fadeIn 0.8s ease;
+}
+
+/* --- Titres --- */
+.legal-container h1,
+.legal-container h2 {
+  color: #00ffff;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+}
+
+.legal-container h1 {
+  font-size: 2.3em;
+  text-align: center;
+  border-bottom: 2px solid #00ffff;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.legal-container h2 {
+  font-size: 1.4em;
+  margin-top: 2em;
+}
+
+/* --- Paragraphes --- */
+.legal-container p {
+  margin: 0.7em 0;
+  text-align: justify;
+}
+
+/* --- Encarts légaux --- */
+.legal-article {
+  background-color: #0d1b2a;
+  border-left: 4px solid #00ffff;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  margin: 15px 0;
+  color: #c4f2f2;
+}
+
+/* --- Crédits en bas --- */
+.legal-credits {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: 60px;
+  color: #999;
+  border-top: 1px solid #00ffff33;
+  padding-top: 15px;
+}
+
+/* --- Liens --- */
+a {
+  color: #00ffff;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #002e4d;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* --- Animation --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
   .legal-container {
-    max-width: 1000px;
-    margin: 3em auto;
-    background: white;
-    padding: 2.5em;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.06);
-    font-size: 1rem;
+    padding: 1.5em;
   }
-  
-  .legal-container h1,
-  .legal-container h2 {
-    color: #002e4d;
-    font-family: 'Georgia', serif;
-    margin-bottom: 1em;
-  }
-  
+
   .legal-container h1 {
-    font-size: 2.3em;
-    text-align: center;
-    border-bottom: 2px solid #002e4d;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
+    font-size: 1.8em;
   }
-  
+
   .legal-container h2 {
-    font-size: 1.4em;
-    margin-top: 2em;
+    font-size: 1.2em;
   }
-  
-  .legal-container p {
-    margin: 0.7em 0;
-    text-align: justify;
-  }
-  
-  /* Encarts juridiques */
-  .legal-article {
-    background-color: #f1f8ff;
-    border-left: 4px solid #007acc;
-    padding: 12px 15px;
-    border-radius: 6px;
-    font-size: 0.95em;
-    margin: 15px 0;
-    color: #1a1a1a;
-  }
-  
-  /* Crédit en bas plus discret */
-  .legal-credits {
-    font-size: 0.85em;
-    text-align: center;
-    margin-top: 60px;
-    color: #666;
-    border-top: 1px solid #ccc;
-    padding-top: 15px;
-  }
+}

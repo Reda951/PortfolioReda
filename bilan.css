@@ -10,6 +10,7 @@ html, body {
     color: #e0f7fa;
   }
   
+  
   /* ----- Wrapper global pour footer sticky ----- */
   .site-wrapper {
     min-height: 100vh;
@@ -138,4 +139,32 @@ html, body {
     text-align: center;
     padding: 1em 0;
     font-size: 0.9em;
+  }
+  header {
+    background-color: #002e4d;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
   }

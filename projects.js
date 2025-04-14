@@ -225,8 +225,12 @@ const projects = [
         "Interaction utilisateur en ligne de commande, gestion des erreurs, logique tarifaire, affichage de l’itinéraire.",
       duree: "2 semaines",
       outils: "Python, Terminal",
-      lecon:
-        "Structuration de l’entrée utilisateur, fonctions, logique métier claire.",
+      lecon:`
+      <a href="https://github.com/esiee-it-slam-2025/aboudi_reda/tree/a9f3fef78c68f63187640350650af01359ceec65/TP%20GARE" 
+         target="_blank" 
+         style="color: #0066cc; text-decoration: underline;">
+        🔗 Voir le code du projet sur GitHub
+      </a>`,
       etapes: ["Création des règles de tarification", "Développement du terminal", "Test du script"],
       competences: [
         {
@@ -339,4 +343,27 @@ const projects = [
       ]
     }
   ];
+  window.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".projects-grid");
+    if (!container) return;
   
+    projects.forEach((project, index) => {
+      const block = document.createElement("div");
+      block.classList.add("project-terminal");
+  
+      block.innerHTML = `
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">${project.title}</span>
+        </div>
+        <div class="terminal-body">
+          <p>${project.description}</p>
+          <button class="btn-show-project" onclick="openPopupByIndex(${index})">🧠 Détails du projet</button>
+        </div>
+      `;
+  
+      container.appendChild(block);
+    });
+  });
