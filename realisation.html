@@ -1,155 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Réalisation - Portfolio Reda Aboudi</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réalisation - Portfolio Reda Aboudi</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="realisation.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="realisation.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-  <!-- Prism pour coloration syntaxique -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js" defer></script>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">RA</div>
-        <ul>
-          <li><a href="acceuil.html">Accueil</a></li>
-          <li><a href="entreprise.html">Entreprise</a></li>
-          <li><a href="realisation.html" class="active">Réalisation</a></li>
-          <li><a href="veille.html">Veille</a></li>
-          <li><a href="bilan.html">Bilan</a></li>
-          <li><a href="MentionLegal.html">Mentions légales</a></li>
-        </ul>
-        <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Header de page -->
-    <section class="page-header">
+    <!-- Prism pour coloration syntaxique -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
       <div class="container">
-        <h1 class="page-title">Mes réalisations</h1>
-        <div class="page-subtitle">Projets réalisés pendant mon alternance</div>
+        <nav>
+          <div class="logo">RA</div>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisation.html" class="active">Réalisation</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
+            <li><a href="MentionLegal.html">Mentions légales</a></li>
+          </ul>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="section">
+    <main>
+      <!-- Header de page -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">Mes réalisations</h1>
+          <div class="page-subtitle">
+            Projets réalisés pendant mon alternance
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p class="intro-text">
+            Voici quelques projets que j'ai pu réaliser ou sur lesquels j'ai
+            travaillé pendant mon alternance chez Best Consulting.
+          </p>
+
+          <div class="projects-grid" id="project-list">
+            <!-- Les projets seront injectés ici via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <div class="back-to-top">
+        <a href="#top"><i class="fas fa-chevron-up"></i></a>
+      </div>
+    </main>
+
+    <!-- Popup détaillé -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-content">
+        <button class="popup-close" onclick="closePopup()">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2 id="popup-title">Nom du projet</h2>
+
+        <div class="popup-section">
+          <h3><i class="fas fa-info-circle"></i> Description du projet</h3>
+          <p id="popup-description"></p>
+        </div>
+
+        <div class="popup-grid">
+          <div class="popup-grid-item">
+            <h4><i class="fas fa-tasks"></i> Mes missions</h4>
+            <p id="popup-missions"></p>
+          </div>
+          <div class="popup-grid-item">
+            <h4><i class="fas fa-clock"></i> Durée</h4>
+            <p id="popup-duree"></p>
+          </div>
+          <div class="popup-grid-item">
+            <h4><i class="fas fa-tools"></i> Outils / Langages</h4>
+            <p id="popup-outils"></p>
+          </div>
+        </div>
+
+        <div class="popup-section">
+          <h4><i class="fas fa-link"></i> Lien du projet</h4>
+          <p id="popup-lecon"></p>
+        </div>
+
+        <div class="popup-section">
+          <h4><i class="fas fa-list-ul"></i> Étapes du projet</h4>
+          <ul id="popup-etapes" class="etapes-list"></ul>
+        </div>
+
+        <div class="popup-section">
+          <h4><i class="fas fa-star"></i> Compétences développées</h4>
+          <div id="popup-competences" class="competence-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zoom modal -->
+    <div id="zoom-modal" class="zoom-modal">
+      <div class="zoom-content">
+        <span class="zoom-close"><i class="fas fa-times"></i></span>
+        <img id="zoomed-img" />
+      </div>
+    </div>
+
+    <!-- README Popup -->
+    <div class="popup-overlay" id="readme-popup">
+      <div class="popup-content readme-popup-content">
+        <button class="popup-close" onclick="closeReadmePopup()">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>README – Projet GestEPI</h2>
+        <div class="iframe-container">
+          <iframe src="docs/EPIaide.md" width="100%" height="500px"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Cahier des charges Fukuoka -->
+    <div class="popup-overlay" id="charge-fukuoka-popup">
+      <div class="popup-content readme-popup-content">
+        <button class="popup-close" onclick="closeChargeFukuoka()">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>Cahier des charges – Fukuoka</h2>
+        <div class="iframe-container">
+          <iframe
+            src="docs/fukuokacharge.md"
+            width="100%"
+            height="500px"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer>
       <div class="container">
-        <p class="intro-text">Voici quelques projets que j'ai pu réaliser ou sur lesquels j'ai travaillé pendant mon alternance chez Best Consulting.</p>
-
-        <div class="projects-grid" id="project-list">
-          <!-- Les projets seront injectés ici via JavaScript -->
+        <div class="footer-content">
+          <p>&copy; 2024 Reda Aboudi</p>
+          <div class="social-links">
+            <a
+              href="https://fr.linkedin.com/in/reda-aboudi-511396277"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
-    
-    <div class="back-to-top">
-      <a href="#top"><i class="fas fa-chevron-up"></i></a>
-    </div>
-  </main>
+    </footer>
 
-  <!-- Popup détaillé -->
-  <div class="popup-overlay" id="popup">
-    <div class="popup-content">
-      <button class="popup-close" onclick="closePopup()"><i class="fas fa-times"></i></button>
-      <h2 id="popup-title">Nom du projet</h2>
-
-      <div class="popup-section">
-        <h3><i class="fas fa-info-circle"></i> Description du projet</h3>
-        <p id="popup-description"></p>
-      </div>
-
-      <div class="popup-grid">
-        <div class="popup-grid-item">
-          <h4><i class="fas fa-tasks"></i> Mes missions</h4>
-          <p id="popup-missions"></p>
-        </div>
-        <div class="popup-grid-item">
-          <h4><i class="fas fa-clock"></i> Durée</h4>
-          <p id="popup-duree"></p>
-        </div>
-        <div class="popup-grid-item">
-          <h4><i class="fas fa-tools"></i> Outils / Langages</h4>
-          <p id="popup-outils"></p>
-        </div>
-      </div>
-
-      <div class="popup-section">
-        <h4><i class="fas fa-link"></i> Lien du projet</h4>
-        <p id="popup-lecon"></p>
-      </div>
-
-      <div class="popup-section">
-        <h4><i class="fas fa-list-ul"></i> Étapes du projet</h4>
-        <ul id="popup-etapes" class="etapes-list"></ul>
-      </div>
-
-      <div class="popup-section">
-        <h4><i class="fas fa-star"></i> Compétences développées</h4>
-        <div id="popup-competences" class="competence-list"></div>
-      </div>      
-    </div>
-  </div>
-
-  <!-- Zoom modal -->
-  <div id="zoom-modal" class="zoom-modal">
-    <div class="zoom-content">
-      <span class="zoom-close"><i class="fas fa-times"></i></span>
-      <img id="zoomed-img" />
-    </div>
-  </div>
-
-  <!-- README Popup -->
-  <div class="popup-overlay" id="readme-popup">
-    <div class="popup-content readme-popup-content">
-      <button class="popup-close" onclick="closeReadmePopup()"><i class="fas fa-times"></i></button>
-      <h2>README – Projet GestEPI</h2>
-      <div class="iframe-container">
-        <iframe src="docs/EPIaide.md" width="100%" height="500px"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- Popup Cahier des charges Fukuoka -->
-  <div class="popup-overlay" id="charge-fukuoka-popup">
-    <div class="popup-content readme-popup-content">
-      <button class="popup-close" onclick="closeChargeFukuoka()"><i class="fas fa-times"></i></button>
-      <h2>Cahier des charges – Fukuoka</h2>
-      <div class="iframe-container">
-        <iframe src="docs/fukuokacharge.md" width="100%" height="500px"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2024 Reda Aboudi</p>
-        <div class="social-links">
-          <a href="https://fr.linkedin.com/in/reda-aboudi-511396277" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-<script src="projects.js"></script>
-<script src="popup.js"></script>
-<script src="realisation.js"></script>
-</body>
+    <script src="projects.js"></script>
+    <script src="popup.js"></script>
+    <script src="realisation.js"></script>
+  </body>
 </html>
