@@ -4,51 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bilan de mes 2 ans de BTS SIO</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="bilan.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-  <div class="site-wrapper">
-    <header>
+  <header>
+    <div class="container">
       <nav>
+        <div class="logo">RA</div>
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="entreprise.html">Entreprise</a></li>
           <li><a href="realisation.html">Réalisation</a></li>
           <li><a href="veille.html">Veille</a></li>
-          <li><a href="bilan.html">Bilan</a></li>
+          <li><a href="bilan.html" class="active">Bilan</a></li>
           <li><a href="MentionLegal.html">Mentions légales</a></li>
         </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main class="bilan-container">
-      <h1>Bilan de mes 2 ans de BTS SIO</h1>
-      <div class="terminal">
-        <div class="terminal-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title">RED'S SHOWTIME.exe</span>
-        </div>
-        <div class="terminal-buttons">
-            <button onclick="showBilan('debut')">💬 Début de formation</button>
-          <button onclick="showBilan('appris')">📘 Ce que j’ai appris</button>
-          <button onclick="showBilan('aime')">❤️ Ce que j’ai aimé</button>
-          <button onclick="showBilan('retiens')">🧠 Ce que je retiens</button>
-          <button onclick="showBilan('apres')">🤔 Et après ?</button>
-        </div>
-        <div class="terminal-body" id="bilan-output">
-          <p class="cursor">Clique sur un bouton pour afficher le bilan...</p>
+  <main>
+    <!-- Header de page -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Bilan de mes 2 ans de BTS SIO</h1>
+        <div class="page-subtitle">Réflexions et perspectives sur mon parcours</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="terminal-wrapper reveal-element">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">RED'S SHOWTIME.exe</span>
+            </div>
+            <div class="terminal-buttons">
+              <button onclick="showBilan('debut')" class="terminal-btn"><i class="fas fa-comment"></i> Début de formation</button>
+              <button onclick="showBilan('appris')" class="terminal-btn"><i class="fas fa-book"></i> Ce que j'ai appris</button>
+              <button onclick="showBilan('aime')" class="terminal-btn"><i class="fas fa-heart"></i> Ce que j'ai aimé</button>
+              <button onclick="showBilan('retiens')" class="terminal-btn"><i class="fas fa-brain"></i> Ce que je retiens</button>
+              <button onclick="showBilan('apres')" class="terminal-btn"><i class="fas fa-forward"></i> Et après ?</button>
+            </div>
+            <div class="terminal-body" id="bilan-output">
+              <p class="cursor">Clique sur un bouton pour afficher le bilan...</p>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
+    
+    <div class="back-to-top">
+      <a href="#top"><i class="fas fa-chevron-up"></i></a>
+    </div>
+  </main>
 
-    <footer>
-      <p>&copy; 2024 Reda Aboudi – Portfolio personnel</p>
-    </footer>
-  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Reda Aboudi</p>
+        <div class="social-links">
+          <a href="https://fr.linkedin.com/in/reda-aboudi-511396277" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="bilan.js"></script>
+  <script src="bilan-visual.js"></script>
 </body>
 </html>

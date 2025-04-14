@@ -45,11 +45,22 @@ function openPopupByIndex(index) {
       content.className = "competence-content";
       content.innerHTML = comp.contenu;
 
-      toggle.addEventListener("click", () => {
-        const isVisible = content.style.display === "block";
-        content.style.display = isVisible ? "none" : "block";
-        toggle.querySelector(".arrow").textContent = isVisible ? "▼" : "▲";
-      });
+      // Dans popup.js, modifiez la partie de création des compétences
+toggle.addEventListener("click", () => {
+  // Remplacer cette partie
+  const isVisible = content.style.display === "block";
+  content.style.display = isVisible ? "none" : "block";
+  toggle.querySelector(".arrow").textContent = isVisible ? "▼" : "▲";
+  
+  // Par celle-ci
+  if (content.classList.contains('open')) {
+    content.classList.remove('open');
+    toggle.classList.remove('open');
+  } else {
+    content.classList.add('open');
+    toggle.classList.add('open');
+  }
+});
 
       container.appendChild(toggle);
       container.appendChild(content);
@@ -66,15 +77,15 @@ function closePopup() {
   popup.style.display = "none";
 }
 function togglePdf(button) {
-    const pdfWrapper = button.nextElementSibling;
-    if (pdfWrapper.style.display === "none") {
-      pdfWrapper.style.display = "block";
-      button.textContent = "❌ Fermer le PDF";
-    } else {
-      pdfWrapper.style.display = "none";
-      button.textContent = "📄 Voir le cahier des charges";
-    }
+  const pdfWrapper = button.nextElementSibling;
+  if (pdfWrapper.style.display === "none" || !pdfWrapper.style.display) {
+    pdfWrapper.style.display = "block";
+    button.innerHTML = '<i class="fas fa-times"></i> Fermer le PDF';
+  } else {
+    pdfWrapper.style.display = "none";
+    button.innerHTML = '<i class="fas fa-file-pdf"></i> Voir le cahier des charges';
   }
+}
   
 
 window.addEventListener("click", function (e) {

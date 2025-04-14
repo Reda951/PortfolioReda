@@ -5,105 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Entreprise - Portfolio Reda Aboudi</title>
   <link rel="stylesheet" href="entreprise.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
-        <li><a href="realisation.html">Réalisation</a></li>
-        <li><a href="veille.html">Veille</a></li>
-        <li><a href="bilan.html">Bilan</a></li>
-        <li><a href="MentionLegal.html">Mentions légales</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <div class="logo">RA</div>
+        <ul>
+          <li><a href="acceuil.html">Accueil</a></li>
+          <li><a href="entreprise.html" class="active">Entreprise</a></li>
+          <li><a href="realisation.html">Réalisation</a></li>
+          <li><a href="veille.html">Veille</a></li>
+          <li><a href="bilan.html">Bilan</a></li>
+          <li><a href="MentionLegal.html">Mentions légales</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
+    <!-- Header de page -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Mon Entreprise d'Alternance</h1>
+        <div class="page-subtitle">Best Consulting</div>
+      </div>
+    </section>
+
     <!-- Présentation de l'entreprise -->
-    <section class="container">
-      <h2>Présentation de l'entreprise</h2>
-      <p>L’entreprise <strong>Best Consulting</strong> est spécialisée dans le développement web, le support client et la gestion de projets IT pour divers types de clients, allant des petites entreprises aux organisations plus structurées.</p>
-      <p>Actuellement en alternance au sein de cette structure, j’ai l’opportunité de participer activement à plusieurs missions : développement front-end (HTML, CSS, JavaScript), traitement de tickets support, gestion de relances, élaboration de devis, et accompagnement technique ponctuel des clients.</p>
-      <p>Je travaille en collaboration avec deux développeurs, <strong>Mehdi</strong> et <strong>Lucas</strong>. L'équipe inclut également <strong>Lisa</strong> au service des ressources humaines, <strong>Inès</strong> côté commercial, et est dirigée par <strong>Abdessamed</strong>, responsable des projets majeurs et de la stratégie globale de l’entreprise.</p>
+    <section id="presentation" class="section">
+      <div class="container">
+        <h2 class="section-title">Présentation de l'entreprise</h2>
+        <div class="company-card reveal-element">
+          <div class="company-content">
+            <p>L'entreprise <strong>Best Consulting</strong> est spécialisée dans le développement web, le support client et la gestion de projets IT pour divers types de clients, allant des petites entreprises aux organisations plus structurées.</p>
+            <p>Actuellement en alternance au sein de cette structure, j'ai l'opportunité de participer activement à plusieurs missions : développement front-end (HTML, CSS, JavaScript), traitement de tickets support, gestion de relances, élaboration de devis, et accompagnement technique ponctuel des clients.</p>
+            <p>Je travaille en collaboration avec deux développeurs, <strong>Mehdi</strong> et <strong>Lucas</strong>. L'équipe inclut également <strong>Lisa</strong> au service des ressources humaines, <strong>Inès</strong> côté commercial, et est dirigée par <strong>Abdessamed</strong>, responsable des projets majeurs et de la stratégie globale de l'entreprise.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Organigramme -->
-    <section id="organigramme" class="container">
-      <h2>Organigramme</h2>
-      <div class="org-container">
-        <div class="org-card boss">
-          <h3>Abdessamed</h3>
-          <p>Directeur</p>
-        </div>
+    <section id="organigramme" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Organigramme</h2>
+        <div class="org-container reveal-element">
+          <div class="org-level">
+            <div class="org-card boss">
+              <div class="org-icon"><i class="fas fa-user-tie"></i></div>
+              <h3>Abdessamed</h3>
+              <p>Directeur</p>
+            </div>
+          </div>
 
-        <div class="org-row">
-          <div class="org-card">
-            <h3>Lisa</h3>
-            <p>Ressources Humaines</p>
-          </div>
-          <div class="org-card">
-            <h3>Inès</h3>
-            <p>Commerciale</p>
-          </div>
-        </div>
+          <div class="org-connector"></div>
 
-        <div class="org-row">
-          <div class="org-card">
-            <h3>Mehdi</h3>
-            <p>Développeur</p>
+          <div class="org-level">
+            <div class="org-card">
+              <div class="org-icon"><i class="fas fa-user-circle"></i></div>
+              <h3>Lisa</h3>
+              <p>Ressources Humaines</p>
+            </div>
+            <div class="org-card">
+              <div class="org-icon"><i class="fas fa-user-circle"></i></div>
+              <h3>Inès</h3>
+              <p>Commerciale</p>
+            </div>
           </div>
-          <div class="org-card">
-            <h3>Lucas</h3>
-            <p>Développeur</p>
-          </div>
-          <div class="org-card">
-            <h3>Reda (Moi)</h3>
-            <p>Alternant Dév Web</p>
+
+          <div class="org-connector"></div>
+
+          <div class="org-level">
+            <div class="org-card">
+              <div class="org-icon"><i class="fas fa-code"></i></div>
+              <h3>Mehdi</h3>
+              <p>Développeur</p>
+            </div>
+            <div class="org-card">
+              <div class="org-icon"><i class="fas fa-code"></i></div>
+              <h3>Lucas</h3>
+              <p>Développeur</p>
+            </div>
+            <div class="org-card highlight">
+              <div class="org-icon"><i class="fas fa-user-graduate"></i></div>
+              <h3>Reda (Moi)</h3>
+              <p>Alternant Dév Web</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Mon rôle -->
-    <section id="mon-role" class="container">
-      <h2>Mon rôle chez Best Consulting</h2>
-      <ul>
-        <li>Réponse aux demandes des clients (par mail et WhatsApp)</li>
-        <li>Prototypage et idées d'amélioration pour les sites en cours ou terminés</li>
-        <li>Analyse d’interfaces déjà en ligne pour proposer des éléments à ajouter</li>
-        <li>Observations UX/UI pour améliorer l'expérience utilisateur</li>
-        <li>Échange régulier avec l'équipe technique pour transmettre les besoins des clients</li>
-      </ul>
+    <section id="mon-role" class="section">
+      <div class="container">
+        <h2 class="section-title">Mon rôle chez Best Consulting</h2>
+        <div class="role-container reveal-element">
+          <div class="role-content">
+            <div class="role-list">
+              <div class="role-item">
+                <div class="role-icon"><i class="fas fa-envelope"></i></div>
+                <div class="role-text">Réponse aux demandes des clients (par mail et WhatsApp)</div>
+              </div>
+              <div class="role-item">
+                <div class="role-icon"><i class="fas fa-paint-brush"></i></div>
+                <div class="role-text">Prototypage et idées d'amélioration pour les sites en cours ou terminés</div>
+              </div>
+              <div class="role-item">
+                <div class="role-icon"><i class="fas fa-search"></i></div>
+                <div class="role-text">Analyse d'interfaces déjà en ligne pour proposer des éléments à ajouter</div>
+              </div>
+              <div class="role-item">
+                <div class="role-icon"><i class="fas fa-desktop"></i></div>
+                <div class="role-text">Observations UX/UI pour améliorer l'expérience utilisateur</div>
+              </div>
+              <div class="role-item">
+                <div class="role-icon"><i class="fas fa-comments"></i></div>
+                <div class="role-text">Échange régulier avec l'équipe technique pour transmettre les besoins des clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Infos + Carte -->
-    <section id="infos" class="container">
-      <h2>Informations de l'entreprise</h2>
-      <div class="info-container">
-        <div class="adresse">
-          <p><strong>Nom :</strong> Best Consulting</p>
-          <p><strong>Adresse :</strong> 22 Vla des Paroseaux, 92320 Châtillon</p>
-        </div>
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5256.053809782304!2d2.2765470923791122!3d48.80046513085102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67099a4395801%3A0x836c098acad1752!2s22%20Vla%20des%20Paroseaux%2C%2092320%20Ch%C3%A2tillon!5e0!3m2!1sfr!2sfr!4v1744221360410!5m2!1sfr!2sfr"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section id="infos" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Informations de l'entreprise</h2>
+        <div class="info-container reveal-element">
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-building"></i></div>
+            <div class="info-content">
+              <h3>Détails</h3>
+              <p><strong>Nom :</strong> Best Consulting</p>
+              <p><strong>Adresse :</strong> 22 Vla des Paroseaux, 92320 Châtillon</p>
+            </div>
+          </div>
+          
+          <div class="map-card">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5256.053809782304!2d2.2765470923791122!3d48.80046513085102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67099a4395801%3A0x836c098acad1752!2s22%20Vla%20des%20Paroseaux%2C%2092320%20Ch%C3%A2tillon!5e0!3m2!1sfr!2sfr!4v1744221360410!5m2!1sfr!2sfr"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- RGPD -->
-    <div class="legal-box container">
-      <p>📌 En entreprise aussi, on fait attention au RGPD : pas de données clients visibles publiquement, on suit les bonnes pratiques pour sécuriser tout ça.</p>
+    <div class="legal-box">
+      <p><i class="fas fa-shield-alt"></i> En entreprise aussi, on fait attention au RGPD : pas de données clients visibles publiquement, on suit les bonnes pratiques pour sécuriser tout ça.</p>
+    </div>
+    
+    <div class="back-to-top">
+      <a href="#top"><i class="fas fa-chevron-up"></i></a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2024 Reda Aboudi</p>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Reda Aboudi</p>
+        <div class="social-links">
+          <a href="https://fr.linkedin.com/in/reda-aboudi-511396277" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <script src="entreprise.js"></script>
 </body>
 </html>

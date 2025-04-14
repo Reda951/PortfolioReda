@@ -5,57 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veille Technologique – Reda Aboudi</title>
   <link rel="stylesheet" href="veille.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-  <div class="site-wrapper">
-    <header>
+  <header>
+    <div class="container">
       <nav>
+        <div class="logo">RA</div>
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="entreprise.html">Entreprise</a></li>
           <li><a href="realisation.html">Réalisation</a></li>
-          <li><a href="veille.html">Veille</a></li>
+          <li><a href="veille.html" class="active">Veille</a></li>
           <li><a href="bilan.html">Bilan</a></li>
           <li><a href="MentionLegal.html">Mentions légales</a></li>
         </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="container">
-        <h1>Veille Technologique</h1>
-        <p>
-          Ici je partage des infos que j’ai trouvées intéressantes en rapport avec le monde du développement et de l’informatique.
+  <main>
+    <!-- Header de page -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Veille Technologique</h1>
+        <div class="page-subtitle">Actualités et découvertes dans le monde du développement</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="intro-text">
+          Ici je partage des infos que j'ai trouvées intéressantes en rapport avec le monde du développement et de l'informatique.
         </p>
 
-        <div class="veille-container">
-          <div class="article">
-            <h2>L'IA dans les jeux vidéo</h2>
-            <p>
-              L’IA permet des PNJ plus réalistes, des dialogues plus intelligents, des mondes plus vivants. J’ai lu ça sur LeBigData, ça m’a marqué.
-            </p>
-            <a href="https://www.lebigdata.fr/ia-bouleverser-jeux-videos" target="_blank">Lire l'article</a>
+        <div class="veille-grid">
+          <div class="veille-card reveal-element">
+            <div class="veille-card-header">
+              <i class="fas fa-robot"></i>
+              <h2>L'IA dans les jeux vidéo</h2>
+            </div>
+            <div class="veille-card-body">
+              <p>
+                L'IA permet des PNJ plus réalistes, des dialogues plus intelligents, des mondes plus vivants. J'ai lu ça sur LeBigData, ça m'a marqué.
+              </p>
+            </div>
+            <div class="veille-card-footer">
+              <a href="https://www.lebigdata.fr/ia-bouleverser-jeux-videos" target="_blank" class="btn-article">
+                <i class="fas fa-external-link-alt"></i> Lire l'article
+              </a>
+              <span class="veille-tag">Intelligence Artificielle</span>
+            </div>
           </div>
 
-          <div class="article">
-            <h2>Automatiser la création de jeu ?</h2>
-            <p>
-              Roblox utilise une IA pour générer du code et des environnements de jeu directement via des instructions. Fou le gain de temps.
-            </p>
-            <a href="https://www.technologyreview.com/2024/09/10/1103752/what-impact-will-ai-have-on-video-game-development/" target="_blank">Voir l'article</a>
+          <div class="veille-card reveal-element">
+            <div class="veille-card-header">
+              <i class="fas fa-gamepad"></i>
+              <h2>Automatiser la création de jeu ?</h2>
+            </div>
+            <div class="veille-card-body">
+              <p>
+                Roblox utilise une IA pour générer du code et des environnements de jeu directement via des instructions. Fou le gain de temps.
+              </p>
+            </div>
+            <div class="veille-card-footer">
+              <a href="https://www.technologyreview.com/2024/09/10/1103752/what-impact-will-ai-have-on-video-game-development/" target="_blank" class="btn-article">
+                <i class="fas fa-external-link-alt"></i> Voir l'article
+              </a>
+              <span class="veille-tag">Game Dev</span>
+            </div>
           </div>
         </div>
-      </section>
-
-      <div class="legal-box">
-        <p>🔍 Cette veille est à but pédagogique. Je cite toujours mes sources et je reste dans un cadre légal (pas de contenu protégé copié).</p>
       </div>
-    </main>
+    </section>
 
-    <footer>
-      <p>&copy; 2024 Reda Aboudi</p>
-    </footer>
-  </div>
+    <div class="legal-box">
+      <p><i class="fas fa-search"></i> Cette veille est à but pédagogique. Je cite toujours mes sources et je reste dans un cadre légal (pas de contenu protégé copié).</p>
+    </div>
+    
+    <div class="back-to-top">
+      <a href="#top"><i class="fas fa-chevron-up"></i></a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Reda Aboudi</p>
+        <div class="social-links">
+          <a href="https://fr.linkedin.com/in/reda-aboudi-511396277" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="veille.js"></script>
 </body>
 </html>
