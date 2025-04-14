@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('nav ul');
     const backToTop = document.querySelector('.back-to-top');
     const legalSections = document.querySelectorAll('.legal-section');
+    const legalContainer = document.querySelector('.legal-container');
     
     // ===== Navigation mobile =====
     if (menuToggle) {
@@ -84,18 +85,32 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ===== Effets visuels pour les sections légales =====
     const setupLegalSections = () => {
+      // S'assurer que le container légal est visible
+      if(legalContainer) {
+        legalContainer.style.opacity = '1';
+        legalContainer.style.visibility = 'visible';
+        legalContainer.style.display = 'block';
+      }
+      
       legalSections.forEach((section, index) => {
-        // Ajouter un délai progressif à l'apparition des sections
+        // Réinitialiser les styles en cas de problème précédent
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+        section.style.transition = 'all 0.5s ease';
+        section.style.visibility = 'visible';
+        section.style.display = 'block';
+        
+        // Effet progressif, mais en s'assurant que tout reste visible
         setTimeout(() => {
-          section.style.opacity = '0';
+          // On ne cache pas complètement les sections au début
+          section.style.opacity = '0.2'; 
           section.style.transform = 'translateY(20px)';
           
           setTimeout(() => {
-            section.style.transition = 'all 0.5s ease';
             section.style.opacity = '1';
             section.style.transform = 'translateY(0)';
           }, 150 * index);
-        }, 500);
+        }, 100); // Délai réduit
         
         // Effet de survol sur les icônes
         const icon = section.querySelector('h2 i');
@@ -135,6 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Rendre immédiatement visibles les éléments avec la classe reveal-element
       document.querySelectorAll('.reveal-element').forEach(el => {
         el.classList.add('active');
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+        el.style.display = 'block';
       });
       
       // Configurer l'observateur d'intersection
@@ -166,4 +184,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Lancer l'initialisation
     init();
-  });
+});

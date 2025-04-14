@@ -416,3 +416,15 @@ footer {
     bottom: 15px;
   }
 }
+.legal-container {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.legal-section {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  transform: none !important;
+}
