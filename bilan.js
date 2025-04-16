@@ -26,7 +26,7 @@ const contenus = {
   
   Et surtout : l’ambiance dans ma classe. Le soutien, les fous rires, les profs qui prennent le temps de nous parler, de nous aider, sans jugement. J’ai grandi à leurs côtés. Et je les remercie pour ça.
   
-  ⚠️ Et pour les employeurs qui liront ce bilan : les alternants ne sont pas juste “des juniors” à former. Ce sont des personnes qui veulent apprendre, qui donnent tout, qui cherchent juste leur place. Donnez-leur leur chance, et vous serez surpris.
+  ⚠️ Et pour les employeurs qui liront ce bilan : les alternants ne sont pas juste "des jeunes à former". Nous sommes des personnes qui veulent apprendre, qui donnent tout, qui cherchent juste leur place. Donnez-nous notre chance, et vous serez surpris.
   `,
   apres: `
 J’aimerais devenir chef de projet. Pas juste pour piloter des équipes, mais pour faire le lien entre les besoins du client, les idées de l’équipe, et les solutions à livrer. J’aime organiser, anticiper, rendre les choses claires et concrètes.
@@ -48,7 +48,7 @@ J’ai aussi compris l’importance d’écrire du code lisible, de commenter (m
 
 Mais ce que je retiens surtout, c’est l’ambiance qu’on a eue : une classe soudée, des profs investis (vraiment !), toujours prêts à prendre le temps d’expliquer, même quand on demandait “juste une dernière chose” à la fin du cours. Franchement, j’ai eu de la chance.
 
-Alors merci à cette filière, à l’ESIEE IT, à ceux qui nous ont poussés, conseillés, motivés... et surtout, à ceux qui nous ont appris à apprendre.
+Alors merci à cette filière, et à ceux qui nous ont poussés, conseillés, motivés... 
 
 Et si je devais résumer ces 2 ans :
 > Coder, c’est 10% d’inspiration… et 90% de “mais pourquoi ça fait ça ?” 🤣🤯
@@ -60,7 +60,7 @@ Et si je devais résumer ces 2 ans :
   
   Mais au-delà des bugs et des erreurs incompréhensibles, j’ai appris à réfléchir, à me poser, à décomposer un problème et à m’auto-corriger.
   
-  Et surtout, j’ai jamais été seul. Les profs m’ont soutenu, mes camarades aussi. C’est ce mélange d’entraide, de doutes et de progrès qui rend l’expérience marquante.
+  Et surtout, j’ai jamais été seul. Les profs m’ont soutenu, mes camarades aussi. C’est ce mélange d’entraide, de doutes et de progrès qui rend mes 2 ans incroyable.
   
   Aujourd’hui, je suis fier du chemin parcouru. Et je sais que ce n’est que le début.
   `

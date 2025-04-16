@@ -312,11 +312,78 @@ const projects = [
       competences: [
         {
           titre: "Collecter, suivre et orienter des demandes",
-          contenu: "Lecture des demandes entrantes, vérification de leur faisabilité et transmission aux bons interlocuteurs."
+          contenu: `
+            Cette conversation client illustre le processus complet de gestion des demandes :
+            <ul>
+              <li>Réception des besoins spécifiques (page "Réalisations", bouton WhatsApp)</li>
+              <li>Analyse rapide de la faisabilité technique avec proposition de solutions concrètes</li>
+              <li>Transmission aux décideurs pour validation et estimation</li>
+              <li>Communication régulière pour maintenir le client informé des étapes</li>
+              <li>Finalisation avec confirmation de prise en charge et planification</li>
+            </ul>
+            <br>
+            <div style="text-align: center; margin: 15px 0;">
+              <img src="docs/Whatsappdiscut.png" alt="Whatsapp discussion" class="zoom-img" style="max-width:100%; border:1px solid #ccc; border-radius:8px; margin-bottom:10px; cursor: zoom-in;">
+            </div>
+            <br>
+            Ce flux de communication montre l'importance d'être l'interface efficace entre les attentes des clients et les possibilités techniques de l'équipe, tout en maintenant une relation de confiance par des retours réguliers.
+          `
         },
         {
           titre: "Traiter des demandes concernant les services réseau et système, applicatifs",
-          contenu: "Certains clients demandaient des sites ou des applis précises, que je relayais avec les infos nécessaires."
+          contenu: `
+            Un client m'a envoyé un message WhatsApp pour demander une petite amélioration sur son site vitrine. Il voulait qu'on ajoute un bouton pour que ses clients puissent télécharger directement son catalogue PDF.
+            
+            <p style="margin: 10px 0;">J'ai lu sa demande et je l'ai transmise à mon responsable pour voir si c'était faisable. On en a discuté rapidement avec l'équipe, et on a validé l'idée parce que c'était simple à mettre en place.</p>
+            
+            <p style="margin: 10px 0;">J'ai ensuite recontacté le client pour lui dire qu'on pouvait s'en occuper dans la semaine, et je lui ai demandé de m'envoyer le fichier à intégrer. Une fois le fichier reçu, j'ai intégré le bouton sur la page d'accueil du site et j'ai testé que le lien fonctionnait bien.</p>
+            
+            <p style="margin-bottom: 15px;">J'ai enfin envoyé une confirmation au client pour lui montrer le rendu et valider que ça lui convenait.</p>
+            
+            <div class="code-exp-grid" style="font-size: 0.9em;">
+              <div class="code-block" style="padding: 10px; max-height: 280px; overflow-y: auto;">
+                <pre style="margin: 0;"><code class="language-html">
+        <!-- Ajout du bouton de téléchargement -->
+        <div class="download-btn-container">
+          <a href="/documents/catalogue-2023.pdf" 
+             class="download-btn" 
+             download>
+            <img src="/images/pdf-icon.png" alt="PDF">
+            Télécharger notre catalogue
+          </a>
+        </div>
+        
+        <style>
+          .download-btn-container {
+            text-align: center;
+            margin: 25px 0;
+          }
+          .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+          }
+          .download-btn:hover {
+            background: #c0392b;
+          }
+          .download-btn img {
+            height: 20px;
+            margin-right: 10px;
+          }
+        </style>
+                </code></pre>
+              </div>
+              <div class="explication" style="padding: 10px; font-size: 0.85em;">
+                Ce code simple permet d'intégrer un bouton de téléchargement visible et intuitif, avec une icône PDF et un effet de survol pour améliorer l'expérience utilisateur. La structure HTML/CSS est optimisée pour s'intégrer facilement dans la page existante.
+              </div>
+            </div>
+          `
         }
       ]
     },
@@ -333,12 +400,51 @@ const projects = [
       etapes: ["Test d'interfaces", "Prototypage de nouvelles idées", "Proposition à l’équipe"],
       competences: [
         {
-          titre: "Participer à l’évolution d’un site Web exploitant les données de l’organisation.",
-          contenu: "Ajout de petits modules ou améliorations de formulaires existants à partir d’observations terrain."
+          titre: "Participer à l'évolution d'un site Web exploitant les données de l'organisation.",
+          contenu: `
+            Dans le cadre de mon alternance, je réalisais des maquettes en réponse aux demandes des clients ou en anticipation de certaines améliorations. Ces maquettes servaient de base de discussion avec l'équipe de développeurs pour valider la faisabilité technique.
+            <br><br>
+            Une fois validées, on se répartissait les tâches pour transformer la maquette en vraie fonctionnalité sur le site. Cela permettait de proposer des ajouts concrets (comme ici un formulaire de contact), tout en gardant une cohérence visuelle et technique.
+            <br><br>
+            <div style="text-align: center; margin-bottom: 25px;">
+              <img src="docs/maquette.jpg" alt="Maquette de formulaire de contact" class="zoom-img" style="max-width: 30%; border-radius: 8px; border: 1px solid #ccc; cursor: zoom-in;">
+            </div>
+            
+            <h5 style="color: var(--primary-color); margin: 30px 0 20px 0; text-align: center; font-size: 1.2rem;">Avant / Après l'implémentation</h5>
+            
+            <div style="display: flex; justify-content: space-between; gap: 20px; margin: 20px 0;">
+              <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center;">
+                <div style="position: relative; padding-top: 56.25%; width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                  <img src="docs/avant.png" alt="Site avant ajout du formulaire" class="zoom-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+                  <div style="position: absolute; top: 15px; left: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 7px 15px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; z-index: 2;">Avant</div>
+                </div>
+              </div>
+              
+              <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center;">
+                <div style="position: relative; padding-top: 56.25%; width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                  <img src="docs/apres.png" alt="Site après ajout du formulaire" class="zoom-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+                  <div style="position: absolute; top: 15px; left: 15px; background-color: rgba(0,255,255,0.7); color: black; padding: 7px 15px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; z-index: 2;">Après</div>
+                </div>
+              </div>
+            </div>
+          `
         },
         {
-          titre: "Réaliser les tests d’intégration et d’acceptation d’un service",
-          contenu: "Tests des sites terminés avant leur mise en ligne, validation UX et bugs mineurs."
+          titre: "Réaliser les tests d'intégration et d'acceptation d'un service",
+          contenu: `
+            Dans le cadre de la mise en ligne d'une nouvelle page "Contact", j'ai été sollicité pour effectuer une série de tests d'intégration. Après réception du message du développeur m'indiquant que l'intégration était terminée, j'ai réalisé plusieurs vérifications :
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+              <li>Affichage responsive testé sur mobile et tablette</li>
+              <li>Vérifications du rendu sur plusieurs navigateurs : Chrome, Firefox et Edge</li>
+              <li>Tests fonctionnels du formulaire de contact (envoi d'un message)</li>
+              <li>Contrôle de la console du navigateur pour s'assurer de l'absence d'erreurs JavaScript</li>
+              <li>Vérification du bon fonctionnement de l'ensemble des liens de la page</li>
+            </ul>
+            
+            <div style="text-align: center; margin: 20px 0;">
+              <img src="docs/discussion.png" alt="Discussion avec le développeur" class="zoom-img" style="max-width: 80%; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0,0,0,0.2); cursor: zoom-in;">
+            </div>
+          `
         }
       ]
     }

@@ -12,6 +12,7 @@
   --transition: all 0.3s ease;
   --card-bg: #141a24;
   --card-border: #1e2837;
+  --star-color: #ffdd00;
 }
 
 /* ----- Base globale ----- */
@@ -155,6 +156,165 @@ nav ul li a.active {
   color: var(--text-muted);
 }
 
+/* ----- Section de présentation ----- */
+.veille-presentation {
+  padding: 40px 0 20px;
+  background-color: rgba(0, 46, 77, 0.2);
+  margin-bottom: 30px;
+}
+
+.presentation-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.presentation-header i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-light);
+}
+
+.presentation-header h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.presentation-content {
+  padding: 0 10px;
+}
+
+.presentation-content > p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.presentation-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.presentation-column h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.presentation-column h3 i {
+  font-size: 1.2rem;
+}
+
+.presentation-column ul {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.presentation-column ul li {
+  position: relative;
+  padding: 5px 0 5px 25px;
+  line-height: 1.6;
+}
+
+.presentation-column ul li:before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ----- Filtres ----- */
+.veille-filtres {
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.filtres-container {
+  background-color: rgba(0, 46, 77, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.filtres-container h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.filtres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.filtre-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtre-group label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.filter-select {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+}
+
+.filter-select:hover, .filter-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-light);
+}
+
+.reset-filters-btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  min-height: 40px;
+}
+
+.reset-filters-btn:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
 /* ----- Veille Cards ----- */
 .veille-grid {
   display: grid;
@@ -212,6 +372,52 @@ nav ul li a.active {
   margin: 0;
   line-height: 1.8;
   color: var(--text-color);
+}
+
+/* Nouvelles meta-informations */
+.veille-card-meta {
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.veille-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-stars {
+  color: var(--star-color);
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+.rating-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.veille-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.veille-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.veille-info i {
+  font-size: 0.9rem;
+  color: var(--primary-color);
 }
 
 .veille-card-footer {
@@ -358,8 +564,12 @@ footer {
   .veille-grid {
     grid-template-columns: 1fr;
   }
+  
+  .presentation-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -389,10 +599,23 @@ footer {
     margin: 15px 0;
   }
   
-  .veille-card-footer {
+  .veille-card-footer, .veille-card-meta {
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
+  }
+  
+  .veille-rating {
+    width: 100%;
+  }
+  
+  .presentation-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .filtres-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -409,5 +632,75 @@ footer {
   .back-to-top {
     right: 15px;
     bottom: 15px;
+  }
+  
+  .veille-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .presentation-content > p {
+    font-size: 1rem;
+  }
+  
+  .filtres-container {
+    padding: 15px;
+  }
+  
+  .filtres-container h3 {
+    font-size: 1.1rem;
+  }
+}
+/* Styles pour les boutons d'article */
+.article-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-summary {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.btn-summary:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  box-shadow: 0 0 15px var(--primary-light);
+}
+
+.btn-summary i {
+  margin-right: 5px;
+}
+
+/* Modifications responsives */
+@media (max-width: 768px) {
+  .article-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-article, .btn-summary {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .veille-card-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .veille-tag {
+    align-self: flex-end;
   }
 }

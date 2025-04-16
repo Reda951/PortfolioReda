@@ -37,48 +37,230 @@
       </div>
     </section>
 
+    <!-- Nouveau bloc de présentation de la veille -->
+    <section class="veille-presentation">
+      <div class="container">
+        <div class="presentation-header">
+          <i class="fas fa-gamepad"></i>
+          <h2>L'IA dans le Gaming</h2>
+        </div>
+        <div class="presentation-content">
+          <p>L'intelligence artificielle transforme rapidement l'industrie du jeu vidéo, tant du côté développement que du côté expérience joueur. Cette veille technologique se concentre sur les avancées de l'IA appliquées au gaming, un domaine en constante évolution.</p>
+          
+          <div class="presentation-columns">
+            <div class="presentation-column">
+              <h3><i class="fas fa-question-circle"></i> Pourquoi ce sujet ?</h3>
+              <p>J'ai choisi ce sujet pour plusieurs raisons :</p>
+              <ul>
+                <li>Ma passion pour les jeux vidéo et la technologie</li>
+                <li>L'évolution rapide de l'IA dans ce secteur</li>
+                <li>Les implications futures pour mon métier de développeur</li>
+                <li>L'impact potentiel sur la création de contenu interactif</li>
+              </ul>
+            </div>
+            <div class="presentation-column">
+              <h3><i class="fas fa-tools"></i> Outils de veille utilisés</h3>
+              <ul>
+                <li><strong>Feedly</strong> : Agrégateur de flux RSS pour suivre les sites spécialisés</li>
+                <li><strong>Google Alerts</strong> : Notifications sur des mots-clés spécifiques</li>
+                <li><strong>Twitter</strong> : Suivi des comptes d'experts et développeurs</li>
+                <li><strong>Discord</strong> : Communautés spécialisées en game dev et IA</li>
+                <li><strong>GitHub</strong> : Projets open source dans le domaine</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtres de veille -->
+    <section class="veille-filtres">
+      <div class="container">
+        <div class="filtres-container">
+          <h3><i class="fas fa-filter"></i> Filtrer les articles</h3>
+          <div class="filtres-grid">
+            <div class="filtre-group">
+              <label for="filter-note">Note minimale</label>
+              <select id="filter-note" class="filter-select">
+                <option value="0">Toutes les notes</option>
+                <option value="1">★ et plus</option>
+                <option value="2">★★ et plus</option>
+                <option value="3">★★★ et plus</option>
+                <option value="4">★★★★ et plus</option>
+                <option value="5">★★★★★ uniquement</option>
+              </select>
+            </div>
+            <div class="filtre-group">
+              <label for="filter-date">À partir de</label>
+              <select id="filter-date" class="filter-select">
+                <option value="all">Toutes les dates</option>
+                <option value="week">7 derniers jours</option>
+                <option value="month">30 derniers jours</option>
+                <option value="quarter">3 derniers mois</option>
+                <option value="year">12 derniers mois</option>
+              </select>
+            </div>
+            <div class="filtre-group">
+              <label for="filter-source">Source</label>
+              <select id="filter-source" class="filter-select">
+                <option value="all">Toutes les sources</option>
+                <option value="lebigdata">Le Big Data</option>
+                <option value="techreview">MIT Technology Review</option>
+                <option value="YouTube">YouTube</option>
+                <option value="oakresearch">OAK research</option>
+              </select>
+            </div>
+            <div class="filtre-group">
+              <button id="reset-filters" class="reset-filters-btn">
+                <i class="fas fa-undo"></i> Réinitialiser
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <p class="intro-text">
-          Ici je partage des infos que j'ai trouvées intéressantes en rapport avec le monde du développement et de l'informatique.
+          Voici une sélection d'articles pertinents sur l'IA et le gaming, régulièrement mise à jour.
         </p>
 
         <div class="veille-grid">
-          <div class="veille-card reveal-element">
+          <!-- Article 1 -->
+          <div class="veille-card reveal-element" data-note="4" data-date="25/02/2025" data-source="lebigdata">
             <div class="veille-card-header">
               <i class="fas fa-robot"></i>
               <h2>L'IA dans les jeux vidéo</h2>
             </div>
             <div class="veille-card-body">
               <p>
-                L'IA permet des PNJ plus réalistes, des dialogues plus intelligents, des mondes plus vivants. J'ai lu ça sur LeBigData, ça m'a marqué.
+                L'IA permet aujourd'hui des PNJ plus réalistes, des dialogues plus intelligents et des mondes plus vivants. Les moteurs de jeu intègrent désormais des algorithmes d'apprentissage qui adaptent l'expérience à chaque joueur.
               </p>
+            </div>
+            <div class="veille-card-meta">
+              <div class="veille-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4/5</span>
+              </div>
+              <div class="veille-info">
+                <span class="veille-author"><i class="fas fa-user"></i> Joarson A.</span>
+                <span class="veille-source"><i class="fas fa-globe"></i> LeBigData</span>
+                <span class="veille-date"><i class="fas fa-calendar-alt"></i> 25/02/2025</span>
+              </div>
             </div>
             <div class="veille-card-footer">
               <a href="https://www.lebigdata.fr/ia-bouleverser-jeux-videos" target="_blank" class="btn-article">
                 <i class="fas fa-external-link-alt"></i> Lire l'article
               </a>
+              <a href="docs/l'iaXgaming.pdf" target="_blank" class="btn-summary">
+                <i class="fas fa-file-pdf"></i> Résumé PDF
+              </a>
               <span class="veille-tag">Intelligence Artificielle</span>
             </div>
           </div>
 
-          <div class="veille-card reveal-element">
+          <!-- Article 2 -->
+          <div class="veille-card reveal-element" data-note="5" data-date="10/09/2024" data-source="techreview">
             <div class="veille-card-header">
               <i class="fas fa-gamepad"></i>
               <h2>Automatiser la création de jeu ?</h2>
             </div>
             <div class="veille-card-body">
               <p>
-                Roblox utilise une IA pour générer du code et des environnements de jeu directement via des instructions. Fou le gain de temps.
+                Roblox utilise désormais une IA pour générer du code et des environnements de jeu directement via des instructions textuelles. Cette technologie pourrait révolutionner le développement de jeux en permettant aux créateurs de se concentrer sur l'aspect créatif plutôt que technique.
               </p>
+            </div>
+            <div class="veille-card-meta">
+              <div class="veille-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">5/5</span>
+              </div>
+              <div class="veille-info">
+                <span class="veille-author"><i class="fas fa-user"></i> Scott Mulligan</span>
+                <span class="veille-source"><i class="fas fa-globe"></i> MIT Technology </span>
+                <span class="veille-date"><i class="fas fa-calendar-alt"></i> 10/09/2024</span>
+              </div>
             </div>
             <div class="veille-card-footer">
               <a href="https://www.technologyreview.com/2024/09/10/1103752/what-impact-will-ai-have-on-video-game-development/" target="_blank" class="btn-article">
-                <i class="fas fa-external-link-alt"></i> Voir l'article
+                <i class="fas fa-external-link-alt"></i> Lire l'article
+              </a>
+              <a href="docs/impactofia.pdf" target="_blank" class="btn-summary">
+                <i class="fas fa-file-pdf"></i> Résumé PDF
               </a>
               <span class="veille-tag">Game Dev</span>
             </div>
           </div>
+
+          <!-- Article 3 -->
+          <div class="veille-card reveal-element" data-note="4" data-date="08/01/2025" data-source="YouTube">
+            <div class="veille-card-header">
+              <i class="fas fa-gamepad"></i>
+              <h2>IA et gaming compétitif : menace sur l'intégrité ?</h2>
+            </div>
+            <div class="veille-card-body">
+              <p>
+                Cette vidéo de 3kliksphilip explore les conséquences de l'IA dans les jeux compétitifs, notamment le risque de triche indétectable. Si on ne peut plus distinguer un joueur humain d'un agent IA, comment maintenir la confiance ? L'auteur évoque aussi l'émergence de NPC adaptatifs et l'équilibrage dynamique par IA, avec leurs avantages et inconvénients pour l'expérience de jeu.
+              </p>
+            </div>
+            <div class="veille-card-meta">
+              <div class="veille-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4/5</span>
+              </div>
+              <div class="veille-info">
+                <span class="veille-author"><i class="fas fa-user"></i> 3kliksphilip</span>
+                <span class="veille-source"><i class="fab fa-youtube"></i> YouTube</span>
+                <span class="veille-date"><i class="fas fa-calendar-alt"></i> 08/01/2025</span>
+              </div>
+            </div>
+            <div class="veille-card-footer">
+              <div class="article-buttons">
+                <a href="https://www.youtube.com/watch?v=UkGaf3Tx0XE" target="_blank" class="btn-article">
+                  <i class="fab fa-youtube"></i> Voir la vidéo
+                </a>
+                <a href="docs/youtubevideo.pdf" target="_blank" class="btn-summary">
+                  <i class="fas fa-file-pdf"></i> Résumé PDF
+                </a>
+              </div>
+              <span class="veille-tag">IA Compétitive</span>
+            </div>
+          </div>
+          <!-- Article à ajouter dans la veille-grid -->
+<div class="veille-card reveal-element" data-note="5" data-date="11/03/2025" data-source="oakresearch">
+  <div class="veille-card-header">
+    <i class="fas fa-robot"></i>
+    <h2>Gaming x Agents IA : Tendance émergente 2025</h2>
+  </div>
+  <div class="veille-card-body">
+    <p>
+      Un article prospectif qui explore l'intégration des agents IA autonomes dans le gaming, avec une dimension Web3 et blockchain. Cette tendance va au-delà des PNJ classiques en créant des entités capables d'interagir, négocier et évoluer comme de véritables joueurs.
+    </p>
+  </div>
+  <div class="veille-card-meta">
+    <div class="veille-rating">
+      <span class="rating-stars">★★★★★</span>
+      <span class="rating-text">5/5</span>
+    </div>
+    <div class="veille-info">
+      <span class="veille-author"><i class="fas fa-user"></i>Oak Research</span>
+      <span class="veille-source"><i class="fas fa-globe"></i>Oak Research</span>
+      <span class="veille-date"><i class="fas fa-calendar-alt"></i> 11/03/2025</span>
+    </div>
+  </div>
+  <div class="veille-card-footer">
+    <div class="article-buttons">
+      <a href="https://oakresearch.io/fr/analyses/innovations/gaming-x-agents-ia-tendance-emergente-2025" target="_blank" class="btn-article">
+        <i class="fas fa-external-link-alt"></i> Lire l'article
+      </a>
+      <a href="docs/GamingxAgents.pdf" target="_blank" class="btn-summary">
+        <i class="fas fa-file-pdf"></i> Résumé PDF
+      </a>
+    </div>
+    <span class="veille-tag">IA + Web3</span>
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -97,12 +279,19 @@
       <div class="footer-content">
         <p>&copy; 2024 Reda Aboudi</p>
         <div class="social-links">
-          <a href="https://fr.linkedin.com/in/reda-aboudi-511396277" target="_blank">
+          <a
+            href="https://fr.linkedin.com/in/reda-aboudi-511396277"
+            target="_blank"
+          >
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="#" target="_blank">
+          <a href="https://github.com/Reda951?tab=repositories"target="_blank">
             <i class="fab fa-github"></i>
           </a>
+        </a>
+        <a href="https://www.instagram.com/tanjirore/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
         </div>
       </div>
     </div>
